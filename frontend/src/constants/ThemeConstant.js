@@ -1,0 +1,4 @@
+export const ThemeConstant = {
+    TOGGLE_COLLAPSED_NAV: 'THEME_TOGGLE_COLLAPSED_NAV',
+    WINDOW_WIDTH: 'THEME_WINDOW_WIDTH',
+};

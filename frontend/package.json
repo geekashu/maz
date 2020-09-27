@@ -1,0 +1,72 @@
+{
+  "name": "maz-calendar",
+  "version": "0.0.1",
+  "author": "Ashish Saini",
+  "private": true,
+  "engines": {
+    "npm": ">=10"
+  },
+  "dependencies": {
+    "@date-io/core": "^2.7.0",
+    "@date-io/moment": "^2.7.0",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/pickers": "^4.0.0-alpha.12",
+    "@popperjs/core": "^2.4.4",
+    "autosuggest-highlight": "^3.1.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "connected-react-router": "^6.8.0",
+    "history": "^4.10.1",
+    "lodash": "^4.17.19",
+    "moment": "^2.27.0",
+    "nprogress": "^0.2.0",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-device-detect": "^1.13.1",
+    "react-dom": "^16.13.1",
+    "react-error-boundary": "^2.2.3",
+    "react-hook-form": "^6.0.8",
+    "react-moment-proptypes": "^1.7.0",
+    "react-number-format": "^4.4.1",
+    "react-placeholder": "^4.0.3",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-toastify": "^6.0.8",
+    "reactstrap": "^8.5.1",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "reselect": "^4.0.0",
+    "typeface-roboto": "^0.0.75",
+    "@hookform/resolvers": "^0.1.0",
+    "yup": "^0.29.1",
+    "react-scripts": "^3.4.3",
+    "node-sass": "^4.14.1",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "redux-logger": "^3.0.6",
+    "react-big-calendar": "^0.28.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts --max_old_space_size=6144 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,273 @@
+/*Sidebar Styles*/
+
+.side-nav {
+  width: $mini-drawer-width;
+  background-color: $sidebar-bg !important;
+  color: $sidebar-text-color !important;
+  border-right: 0 none !important;
+  z-index: 1250 !important;
+
+  & .mirfak-logo-div {
+    background-color: $sidebar-bg-darken;
+    padding: 10px;
+  }
+
+  & .mirfak-logo {
+    height: 44px !important;
+    width: 44px !important;
+    line-height: 44px;
+  }
+}
+
+.side-nav-menu {
+  font-size: $font-size-base;
+}
+
+.nav-section {
+  position: relative;
+
+  & .nav-header {
+    color: $sidebar-text-color;
+    font-size: 9px;
+    text-transform: uppercase;
+    border-top: solid $border-width lighten($sidebar-bg, 6%);
+    padding: 5px;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  &:first-child {
+    & .nav-header {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 0 none;
+    }
+  }
+
+  & .nav-menu-item {
+    padding: 0;
+  }
+
+  & .nav-collapse,
+  & .nav-menu-item {
+    margin-bottom: 1px;
+    border-left: 3px solid rgba(0,0,0,0);
+
+    &:focus,
+    &:hover,
+    &.active {
+      background-color: #202226;
+      -o-border-image: -o-linear-gradient(#f05a28 30%, #fbca0a 99%);
+      border-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #f05a28), color-stop(99%, #fbca0a));
+      border-image: -webkit-linear-gradient(#f05a28 30%, #fbca0a 99%);
+      border-image: linear-gradient(#f05a28 30%, #fbca0a 99%);
+      border-image-slice: 1;
+      border-style: solid;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-left-width: 3px;
+
+    }
+  }
+}
+
+.nav-arrow {
+  margin-left: -15px;
+  margin-top: 15px;
+}
+
+.nav-collapse {
+  position: relative;
+
+  & &-btn {
+    color: $sidebar-text-color;
+    display: block;
+    text-decoration: none;
+    line-height: 44px;
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-left: -1px;
+
+    &:focus,
+    &:hover {
+      background-color: $sidebar-bg-darken;
+      color: $sidebar-hover-color;
+    }
+  }
+
+  &.open {
+    background-color: $sidebar-bg-darken;
+
+    & .nav-collapse-btn {
+      background-color: $sidebar-bg-darken;
+      color: $sidebar-hover-color;
+
+      &:focus,
+      &:hover {
+        background-color: $sidebar-bg-darken;
+        color: $sidebar-hover-color;
+      }
+    }
+  }
+
+  & i {
+    margin-right: 12px;
+    font-size: 30px;
+  }
+
+  & .nav-text {
+    flex: 1;
+  }
+
+}
+
+.nav-collapse {
+  & .nav-menu-item i {
+    font-size: 30px;
+  }
+
+  & .nav-menu-item .nav-menu-link {
+    color: $sidebar-text-color;
+    //@include border-right-radius($border-radius-xxl);
+    position: relative;
+    display: block;
+    text-decoration: none;
+    line-height: 44px;
+    padding: 13px 10px 0 8px;
+    text-align: center;
+
+    &:focus,
+    &:hover,
+    &.active {
+      background-color: $sidebar-bg-darken;
+      color: $sidebar-hover-color;
+    }
+  }
+
+  &.open {
+    & .nav-menu-item .nav-menu-link.active {
+      background-color: $sidebar-bg-darken-highlight;
+      color: $sidebar-hover-color;
+    }
+  }
+
+  & .nav-collapse {
+    & .nav-collapse-btn {
+      padding-left: 52px;
+    }
+
+    & .nav-menu-item .nav-menu-link {
+      padding-left: 72px;
+    }
+
+    & .nav-collapse {
+      & .nav-menu-item .nav-menu-link {
+        padding-left: 92px;
+      }
+
+      & .nav-collapse-btn {
+        padding-left: 72px;
+      }
+    }
+  }
+}
+
+.nav-collapse-item {
+  margin-left: -2px;
+}
+
+.nav-menu-item {
+  & .nav-menu-link {
+    color: $sidebar-text-color;
+    display: block;
+    text-decoration: none;
+    line-height: 44px;
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    padding: 13px 10px 0 8px;
+
+    &:focus,
+    &:hover,
+    &.active {
+      background-color: $sidebar-bg-darken;
+      color: $sidebar-hover-color;
+      -o-border-image: -o-linear-gradient(#f05a28 30%,#fbca0a 99%);
+      border-image: -webkit-gradient(linear,left top,left bottom,color-stop(30%,#f05a28),color-stop(99%,#fbca0a));
+      border-image: -webkit-linear-gradient(#f05a28 30%,#fbca0a 99%);
+      border-image: linear-gradient(#f05a28 30%,#fbca0a 99%);
+      border-image-slice: 1;
+      border-style: solid;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+      margin-left: -3px;
+      border-left-width: 3px;
+    }
+  }
+
+  & i {
+    font-size: 30px;
+  }
+}
+
+.app-container.mini-drawer {
+  & .side-nav {
+    @include transition($transition-base);
+    width: $mini-drawer-width;
+
+    //&:not(:hover) {
+    //  & .nav-collapse .nav-collapse-btn,
+    //  & .nav-menu-item .nav-menu-link {
+    //    padding: 12px 10px;
+    //  }
+    //
+    //  & .nav-section {
+    //    & .nav-header {
+    //      margin-left: 10px;
+    //      margin-right: 10px;
+    //    }
+    //
+    //    &:not(:first-child) .nav-header {
+    //      padding-top: 20px;
+    //      margin-top: 10px;
+    //    }
+    //  }
+    //
+    //  & .side-nav-menu .nav-text,
+    //  & .side-nav-menu .nav-arrow,
+    //  & .user-profile .user-detail,
+    //  & .side-nav-menu .nav-collapse.open > .nav-collapse-item {
+    //    display: none;
+    //  }
+    //
+    //  & .side-nav-menu .nav-section {
+    //    text-align: center;
+    //
+    //  }
+    //
+    //  & .side-nav-menu .nav-section .nav-collapse-btn {
+    //    text-align: center;
+    //    justify-content: center;
+    //  }
+    //
+    //  & .side-nav-menu .nav-section i,
+    //  & .side-nav-menu .nav-section .zmdi {
+    //    margin-right: 0;
+    //  }
+    //}
+  }
+}
+
+.user-info {
+  & ul {
+    & li {
+      font-size: 15px;
+    }
+  }
+}

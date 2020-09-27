@@ -1,0 +1,32 @@
+.user-nickname {
+  text-transform: uppercase;
+}
+
+.ly-card-header {
+  height: 50px;
+}
+
+.grid-item {
+  background: #212124;
+  border: 1px solid #141414;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item__header {
+  height: 30px;
+  cursor: move;
+
+  & .MuiCardHeader-action {
+    flex: 0 0 auto;
+    align-self: center;
+    margin-top: unset;
+    margin-right: unset;
+  }
+}
+
+.grid-item__graph {
+  display: flex;
+  flex: 1;
+}
+
